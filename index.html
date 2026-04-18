@@ -1,127 +1,732 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ANSIparts.com</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANSIparts.com | ANSI Pump Components and OEM Supply</title>
+  <meta name="description" content="ANSIparts.com supplies ANSI pump components, assemblies, and OEM programs with in house engineering, casting, machining, and performance testing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --white: #ffffff;
+      --text: #0f172a;
+      --muted: #566173;
+      --line: #e5e7eb;
+      --dark: #0b1220;
+      --accent: #163a63;
+      --accent2: #2d5f95;
+      --soft: #eef4fa;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+      --max: 1180px;
+    }
 
-<style>
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background: #ffffff;
-    color: #1a1a1a;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.header {
-    font-size: 28px;
-    font-weight: 600;
-}
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-.subheader {
-    color: #666;
-    margin-top: 5px;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.section {
-    margin-top: 60px;
-}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-h1 {
-    font-size: 40px;
-    line-height: 1.2;
-}
+    .container {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
 
-p {
-    line-height: 1.7;
-    color: #444;
-}
+    .topbar-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-.box {
-    border: 1px solid #e5e5e5;
-    padding: 20px;
-    border-radius: 10px;
-}
+    .logo-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
 
-.contact {
-    border-top: 1px solid #e5e5e5;
-    margin-top: 60px;
-    padding-top: 30px;
-}
-</style>
+    .brand-text h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-text p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #334155;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 76px 0 54px;
+      background:
+        radial-gradient(circle at top right, rgba(45,95,149,0.10), transparent 28%),
+        linear-gradient(to bottom, #ffffff, #f6f8fb);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid #d8e4f0;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: 54px;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      max-width: 760px;
+    }
+
+    .hero p {
+      margin: 22px 0 0;
+      max-width: 700px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--dark);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--dark);
+      border-color: var(--line);
+    }
+
+    .btn-secondary:hover {
+      background: #fafafa;
+      border-color: #cfd7e2;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image {
+      width: 100%;
+      min-height: 380px;
+      object-fit: cover;
+      background: #dfe5ed;
+    }
+
+    .hero-note {
+      padding: 16px 18px;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+
+    .stats {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 34px;
+    }
+
+    .section-kicker {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .section-head h3 {
+      margin: 0 0 12px;
+      font-size: 40px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .dark-band {
+      padding: 92px 0;
+      background: linear-gradient(135deg, #0b1220, #1a2b43);
+      color: #fff;
+    }
+
+    .dark-band .section-kicker {
+      color: #a9c0dd;
+    }
+
+    .dark-band .section-head p,
+    .dark-band .card p {
+      color: #d3dbe6;
+    }
+
+    .dark-band .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: none;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .info-panel {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-panel h4 {
+      margin: 0 0 16px;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .list-item {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid #eceff3;
+      color: #334155;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .contact-wrap {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-left {
+      padding: 42px;
+      background: linear-gradient(135deg, #f7fafc, #eef4fa);
+      border-right: 1px solid var(--line);
+    }
+
+    .contact-right {
+      padding: 42px;
+    }
+
+    .contact-left h4,
+    .contact-right h4 {
+      margin: 0 0 14px;
+      font-size: 26px;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-left p,
+    .contact-right p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .contact-line {
+      margin-top: 18px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .footer {
+      padding: 30px 0 42px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .card-grid,
+      .two-col,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-left {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 18px;
+      }
+
+      .hero {
+        padding: 56px 0 38px;
+      }
+
+      .section,
+      .dark-band {
+        padding: 72px 0;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      .section-head h3 {
+        font-size: 31px;
+      }
+
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      .logo-box {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
-
-    <div class="header">ANSIparts.com</div>
-    <div class="subheader">OEM ANSI Pump Parts and Assemblies</div>
-
-    <div class="section">
-        <h1>Interchangeable ANSI pump parts supply</h1>
-        <p>
-            ANSIparts.com supplies ANSI pump parts and assemblies for distributors, repair facilities, and OEM partners.
-            Focused on consistent supply, neutral packaging, and practical product support.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>Product Scope</h2>
-        <div class="grid">
-            <div class="box">Power Ends</div>
-            <div class="box">Casings and Impellers</div>
-            <div class="box">Shaft and Sleeve Assemblies</div>
-            <div class="box">Seal Chambers and Covers</div>
-            <div class="box">Repair Kits</div>
-            <div class="box">OEM Supply Programs</div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo-box">AP</div>
+        <div class="brand-text">
+          <h1>ANSIparts.com</h1>
+          <p>ANSI Pump Components and OEM Supply</p>
         </div>
-    </div>
+      </div>
 
-    <div class="section">
-        <h2>Why ANSIparts.com</h2>
-        <div class="grid">
-            <div class="box">ANSI dimensional interchangeability</div>
-            <div class="box">Neutral packaging available</div>
-            <div class="box">Built for recurring supply</div>
-            <div class="box">Support for aftermarket and OEM channels</div>
-        </div>
+      <nav class="nav">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#products">Programs</a>
+        <a href="#why">Why Us</a>
+        <a href="#confidentiality">Confidentiality</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="section">
-        <h2>Who We Work With</h2>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Built for industrial OEMs, pump companies, and private label programs</div>
+        <h2>ANSI pump components, assemblies, and engineered OEM supply programs</h2>
         <p>
-            Industrial distributors, pump repair facilities, service companies, and OEM partners requiring
-            reliable ANSI pump parts supply.
+          ANSIparts.com is a premium source for ANSI pump components and assemblies backed by full in house engineering, casting, machining, hydraulic validation, and performance testing. We support both established OEMs and emerging pump brands looking for a serious manufacturing partner with strong confidentiality, competitive pricing, and dependable execution.
         </p>
-    </div>
 
-    <div class="contact">
-        <h2>Contact</h2>
-        <p>Email: info@ansiparts.com</p>
-        <p>Phone: +1 XXX XXX XXXX</p>
-    </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Request Information</a>
+          <a class="btn btn-secondary" href="#products">View Supply Scope</a>
+        </div>
 
-</div>
+        <div class="stats">
+          <div class="stat">
+            <strong>In house engineering and manufacturing</strong>
+            <span>From foundry and machining through assembly and test support</span>
+          </div>
+          <div class="stat">
+            <strong>3196 and Mark 3 equivalent platforms</strong>
+            <span>Support for common ANSI process pump product families</span>
+          </div>
+          <div class="stat">
+            <strong>Confidential OEM supply</strong>
+            <span>NDA based relationships and neutral presentation when required</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=80" alt="Industrial manufacturing" />
+        <div class="hero-note">
+          Replace this placeholder with your own image of castings, machining centers, impellers, assembled shaft kits, or performance testing.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="capabilities">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Core Capabilities</div>
+        <h3>A full fledged engineering and manufacturing platform for ANSI pump products</h3>
+        <p>
+          This is not a trading model. ANSIparts.com is built around real pump manufacturing capability including design support, casting, machining, assembly programs, hydraulic validation, and performance testing for ANSI pump components and packages.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h4>Engineering and Validation</h4>
+          <p>ANSI pump products supported by engineering review, CFD based development work, hydraulic ratification, and performance testing capability.</p>
+        </div>
+
+        <div class="card">
+          <h4>In House Machining</h4>
+          <p>Dedicated machining capability for critical pump components with better control over quality, repeatability, and delivery.</p>
+        </div>
+
+        <div class="card">
+          <h4>Foundry Access and Casting Control</h4>
+          <p>Cast components supplied in ductile iron, carbon steel, stainless steel, and duplex stainless steel as standard offerings, with broader metallurgy support available based on project need.</p>
+        </div>
+
+        <div class="card">
+          <h4>ISO 9001 Manufacturing</h4>
+          <p>Production supported through ISO 9001 certified manufacturing systems focused on process control, traceability, and consistent output.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-band" id="products">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Supply Programs</div>
+        <h3>From components to pre assembled kits and complete pump programs</h3>
+        <p>
+          ANSIparts.com is built for companies that need more than one off replacement parts. We support recurring programs, grouped assemblies, and platform based supply for OEMs and private label customers.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h4>ANSI Process Pump Components</h4>
+          <p>Components and assemblies covering 3196 equivalent platforms and Mark 3 reverse vane equivalent platforms for industrial ANSI pump markets.</p>
+        </div>
+
+        <div class="card">
+          <h4>Pre Assembled Shaft Kits</h4>
+          <p>Ready to supply shaft based repair and rebuild kits to reduce assembly burden and improve consistency at the customer end.</p>
+        </div>
+
+        <div class="card">
+          <h4>Power End Programs</h4>
+          <p>Pre assembled power end and rotating assembly programs for customers seeking repeatable OEM style supply with reduced field complexity.</p>
+        </div>
+
+        <div class="card">
+          <h4>Complete Pump Programs</h4>
+          <p>Pre assembled pump programs with competitive pricing and flexible metallurgy support for companies looking to extend or launch product offerings.</p>
+        </div>
+
+        <div class="card">
+          <h4>Self Priming Trash Pump Programs</h4>
+          <p>Equivalent supply support for self priming trash pump platforms aligned with the Gorman Rupp Super T category for customers building broader pump portfolios.</p>
+        </div>
+
+        <div class="card">
+          <h4>Flexible Material Offering</h4>
+          <p>Standard support in DI, carbon steel, stainless steel, and duplex stainless steel, with additional metallurgy options available depending on application and cost targets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Why OEMs Work With Us</div>
+        <h3>Premium capability, low profile execution, and commercial discipline</h3>
+        <p>
+          We are not targeting end user sales. The model is built for industrial OEMs, existing pump brands, and new market entrants that already know how they want to go to market and need a dependable manufacturing partner behind them.
+        </p>
+      </div>
+
+      <div class="two-col">
+        <div class="info-panel">
+          <h4>What makes the offering strong</h4>
+          <div class="list">
+            <div class="list-item">Benchmarking against established OEM standards in the market</div>
+            <div class="list-item">Competitive pricing without giving up engineering depth</div>
+            <div class="list-item">Ability to support both mature and new product programs</div>
+            <div class="list-item">Suitable for private label and confidential supply relationships</div>
+            <div class="list-item">Commercially practical for recurring volume programs</div>
+          </div>
+        </div>
+
+        <div class="info-panel">
+          <h4>Typical partner profile</h4>
+          <div class="list">
+            <div class="list-item">Pump OEMs seeking confidential manufacturing support</div>
+            <div class="list-item">Industrial brands expanding into ANSI pump platforms</div>
+            <div class="list-item">Companies developing their own aftermarket lines</div>
+            <div class="list-item">Organizations launching new pump brands</div>
+            <div class="list-item">Groups seeking a dependable source for assemblies and kits</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="confidentiality">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Confidentiality</div>
+        <h3>Trusted manufacturing support with confidentiality built in</h3>
+        <p>
+          Confidentiality is a core part of the model. ANSIparts.com supports OEM and private label relationships where product strategy, sourcing structure, and customer positioning must remain protected. We are prepared to work under NDA and support fully confidential programs with neutral presentation and disciplined handling of commercial information.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h4>NDA Ready</h4>
+          <p>We are prepared to enter formal confidentiality agreements for qualified supply relationships.</p>
+        </div>
+
+        <div class="card">
+          <h4>Neutral Presentation</h4>
+          <p>Programs can be structured to support discreet supply without unnecessary market visibility.</p>
+        </div>
+
+        <div class="card">
+          <h4>Trusted by OEM Focused Buyers</h4>
+          <p>Built for companies that need quality, discipline, and price competitiveness without compromising confidentiality.</p>
+        </div>
+
+        <div class="card">
+          <h4>Serious Long Term Intent</h4>
+          <p>The objective is to become a dependable engineering and manufacturing partner, not just a short term parts source.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-grid">
+          <div class="contact-left">
+            <h4>Request more information</h4>
+            <p>
+              If you are an industrial OEM, an existing pump company, or a group developing a new pump line and want to discuss confidential manufacturing support, assemblies, kits, or complete pump programs, reach out to us directly.
+            </p>
+
+            <div class="contact-line">Email: info@ansiparts.com</div>
+          </div>
+
+          <div class="contact-right">
+            <h4>Helpful information to include</h4>
+            <p>Product family or platform of interest</p>
+            <p>Whether the need is components, assemblies, kits, or complete pumps</p>
+            <p>Material requirements and target quantities</p>
+            <p>Whether the program is private label or OEM confidential</p>
+            <p>Any current references, drawings, or performance expectations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 ANSIparts.com</div>
+      <div>ANSI pump components, assemblies, and confidential OEM supply programs</div>
+    </div>
+  </footer>
 
 </body>
 </html>
